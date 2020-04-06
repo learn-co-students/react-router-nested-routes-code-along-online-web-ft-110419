@@ -1,7 +1,7 @@
 import React from 'react';
 
-
 const MovieShow = ({ match, movies }) => {
+
     const moviesParams = movies[match.params.movieId]
     const description = !moviesParams.descrip ? "No description" : moviesParams.descrip
     return (
