@@ -12,7 +12,8 @@ class App extends Component {
     movies: {
       1: { id: 1, title: 'A River Runs Through It' },
       2: { id: 2, title: 'Se7en' },
-      3: { id: 3, title: 'Inception' }
+      3: { id: 3, title: 'Inception' },
+      4: { id: 4, title: 'The Incredible Hulk', descrip: "Banner becomes the Hulk when angry" }
     }
   }
 
@@ -22,7 +23,7 @@ class App extends Component {
         <div>
           <NavBar />
           <Route exact path="/" render={() => <div>Home</div>} />
-          <Route path='/movies' render={routerProps => <MoviesPage {...routerProps} movies={this.state.movies}/>} />
+          <Route path='/movies' render={routerProps => <MoviesPage {...routerProps} movies={this.state.movies} />} />
         </div>
       </Router>
     );
